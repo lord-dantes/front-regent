@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<main>
+		<section class="blog">
+			<div class="container">
+				<h2>Блог</h2>
+				<div class="blog-items">
+					<div class="blog-item">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLmC1syaA3x2mjFceK4SxluHsRivJEi3QnAw&usqp=CAU" alt="">
+						<div class="blog-info">
+							<p class="blog-title">Lorem, ipsum.</p>
+							<div class="blog-properties">
+								<p>11.12.20</p>
+								<p>Категорія</p>
+							</div>
+							<p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac ante augue. Praesent consequat, sapien eu tincidunt sagittis, massa tortor rutrum odio, ac dignissim ante dui at mi. Suspendisse cursus libero sit amet iaculis consequat. Cras turpis dui, rhoncus eget turpis eu, mattis tincidunt tellus. </p>
+							<a href="javascript:void(0);" class="blog-link">Читати далі</a>
+						</div>
+					</div>
+					<div class="blog-item">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLmC1syaA3x2mjFceK4SxluHsRivJEi3QnAw&usqp=CAU" alt="">
+						<div class="blog-info">
+							<p class="blog-title">Lorem, ipsum.</p>
+							<div class="blog-properties">
+								<p>11.12.20</p>
+								<p>Категорія</p>
+							</div>
+							<p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac ante augue. Praesent consequat, sapien eu tincidunt sagittis, massa tortor rutrum odio, ac dignissim ante dui at mi. Suspendisse cursus libero sit amet iaculis consequat. Cras turpis dui, rhoncus eget turpis eu, mattis tincidunt tellus. </p>
+							<a href="javascript:void(0);" class="blog-link">Читати далі</a>
+						</div>
+					</div>
+					<div class="blog-item">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLmC1syaA3x2mjFceK4SxluHsRivJEi3QnAw&usqp=CAU" alt="">
+						<div class="blog-info">
+							<p class="blog-title">Lorem, ipsum.</p>
+							<div class="blog-properties">
+								<p>11.12.20</p>
+								<p>Категорія</p>
+							</div>
+							<p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac ante augue. Praesent consequat, sapien eu tincidunt sagittis, massa tortor rutrum odio, ac dignissim ante dui at mi. Suspendisse cursus libero sit amet iaculis consequat. Cras turpis dui, rhoncus eget turpis eu, mattis tincidunt tellus. </p>
+							<a href="javascript:void(0);" class="blog-link">Читати далі</a>
+						</div>
+					</div>
+				</div>
+				<div class="blog-nav">
+					<button class="blog-prev blog-arrows">
+						<img src="img/blog-arrow.svg" alt="">
+					</button>
+					<ul class="blog-nav-items">
+						<li class="active">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+					</ul>
+					<button class="blog-next blog-arrows">
+						<img src="img/blog-arrow.svg" alt="">
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-box">
+				<div class="footer-column">
+					<img src="img/footer-logo.svg" alt="">
+					<p>Охоронне агентство</p>
+					<div class="footer-social">
+						<a href=""><img src="img/footer-inst.svg" alt=""></a>
+						<a href=""><img src="img/footer-telegram.svg" alt=""></a>
+						<a href=""><img src="img/footer-fb.svg" alt=""></a>
+					</div>
+				</div>
+				<div class="footer-column footer-nav">
+					<p>МИ ПРОПОНУЄМО</p>
+					<ul>
+						<li><a href="">Охорона будинку</a></li>
+						<li><a href="">Охорона квартири</a></li>
+						<li><a href="">Охорона бізнесу</a></li>
+						<li><a href="">GPS моніторинг автомобіля</a></li>
+						<li><a href="">Ajaks Start</a></li>
+						<li><a href="">Фізична охорона бізнесу</a></li>
+					</ul>
+				</div>
+				<div class="footer-column footer-contacts">
+					<p>НАШІ КОНТАКТИ</p>
+					<p>Якщо у вас є запитання, зателефонуйте нам або напишіть - ми завжди раді допомогти.</p>
+					<p>ФОП Lorem Ip. Sum. <br>
+						Київ, Lorem ipsum <br>	
+						+38 (099) 999-99-99 <br>
+						lorem@ipsum.com <br>
+						Пн - Пт 9:00 - 18:00
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$('.tab-nav li:first').addClass('select');
+			$('.tab-content > div').hide().filter(':first').show();
+			$('.tab-nav a').click(function(){
+			  var $id = $(this).attr('data-tab'); 
+			  $('.tab-content > div').hide();
+			  $(".tab-content > div[data-tab="+ $id + "]").show();
+			  $('.tab-nav li').removeClass('select');
+			  $(this).parent().addClass('select'); 
+			  return (false);
+			});
+		});
+	</script>
+</body>
+</html>
