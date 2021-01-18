@@ -9,6 +9,55 @@
 </head>
 <body>
 	<main>
+		<header class="header">
+			<div class="header-img__box">
+				<img src="img/logo.svg" alt="">
+			</div>
+			<div class="header-info">
+				<div class="header-phone">
+					<a href="">+38 095 625 77 77</a>
+					<a href="">+38 073 625 77 77</a>
+					<a href="">+38 097 625 77 77</a>
+				</div>
+				 <nav class="header-nav">
+				 	<ul>
+				 		<li><a href="">Головна</a></li>
+				 		<li>
+				 			<a href="">Послуги</a>
+				 			<ul>
+				 				<li><a href="">Охорона офісу</a></li>
+				 				<li><a href="">Охорона будинку</a></li>
+				 				<li><a href="">Охорона квартири</a></li>
+				 			</ul>
+				 		</li>
+				 		<li><a href="">Про нас</a></li>
+				 		<li><a href="">Блог</a></li>
+				 		<li>
+				 			<a href="">Контакти</a>
+				 			<ul>
+				 				<li><a href="">+38 095 625 77 77</a></li>
+				 				<li><a href="">+38 073 625 77 77</a></li>
+				 				<li><a href="">+38 097 625 77 77</a></li>
+				 			</ul>
+				 		</li>
+				 	</ul>
+				 </nav>
+			 </div>
+			 <div class="header-lang">
+			 	<a href="" class="active">УКР</a><a href="">РУС</a>
+			 </div>
+			 <a href="javascript:void(0);" class="header-btn header-btn--close">
+			 	<span></span>
+			 	<span></span>
+			 	<span></span>
+			 </a>
+			 <a href="" class="header-link">Залишити заявку</a>
+		</header>
+		<a href="javascript:void(0);" class="header-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
 		<section class="homebanner">
 			<div class="container">
 				<div class="homebanner-info">
@@ -381,43 +430,43 @@
 				</div>
 			</div>
 		</section>
-	</main>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer-box">
-				<div class="footer-column">
-					<img src="img/footer-logo.svg" alt="">
-					<p>Охоронне агентство</p>
-					<div class="footer-social">
-						<a href=""><img src="img/footer-inst.svg" alt=""></a>
-						<a href=""><img src="img/footer-telegram.svg" alt=""></a>
-						<a href=""><img src="img/footer-fb.svg" alt=""></a>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-box">
+					<div class="footer-column">
+						<img src="img/footer-logo.svg" alt="">
+						<p>Охоронне агентство</p>
+						<div class="footer-social">
+							<a href=""><img src="img/footer-inst.svg" alt=""></a>
+							<a href=""><img src="img/footer-telegram.svg" alt=""></a>
+							<a href=""><img src="img/footer-fb.svg" alt=""></a>
+						</div>
+					</div>
+					<div class="footer-column footer-nav">
+						<p>МИ ПРОПОНУЄМО</p>
+						<ul>
+							<li><a href="">Охорона будинку</a></li>
+							<li><a href="">Охорона квартири</a></li>
+							<li><a href="">Охорона бізнесу</a></li>
+							<li><a href="">GPS моніторинг автомобіля</a></li>
+							<li><a href="">Ajaks Start</a></li>
+							<li><a href="">Фізична охорона бізнесу</a></li>
+						</ul>
+					</div>
+					<div class="footer-column footer-contacts">
+						<p>НАШІ КОНТАКТИ</p>
+						<p>Якщо у вас є запитання, зателефонуйте нам або напишіть - ми завжди раді допомогти.</p>
+						<p>ФОП Lorem Ip. Sum. <br>
+							Київ, Lorem ipsum <br>	
+							+38 (099) 999-99-99 <br>
+							lorem@ipsum.com <br>
+							Пн - Пт 9:00 - 18:00
+						</p>
 					</div>
 				</div>
-				<div class="footer-column footer-nav">
-					<p>МИ ПРОПОНУЄМО</p>
-					<ul>
-						<li><a href="">Охорона будинку</a></li>
-						<li><a href="">Охорона квартири</a></li>
-						<li><a href="">Охорона бізнесу</a></li>
-						<li><a href="">GPS моніторинг автомобіля</a></li>
-						<li><a href="">Ajaks Start</a></li>
-						<li><a href="">Фізична охорона бізнесу</a></li>
-					</ul>
-				</div>
-				<div class="footer-column footer-contacts">
-					<p>НАШІ КОНТАКТИ</p>
-					<p>Якщо у вас є запитання, зателефонуйте нам або напишіть - ми завжди раді допомогти.</p>
-					<p>ФОП Lorem Ip. Sum. <br>
-						Київ, Lorem ipsum <br>	
-						+38 (099) 999-99-99 <br>
-						lorem@ipsum.com <br>
-						Пн - Пт 9:00 - 18:00
-					</p>
-				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
+	</main>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
@@ -430,6 +479,18 @@
 			  $('.tab-nav li').removeClass('select');
 			  $(this).parent().addClass('select'); 
 			  return (false);
+			});
+			// 
+			$('.header-btn').click(function(event) {
+				$('.header').addClass('active');
+			});
+			$('.header-btn--close').click(function(event) {
+				$('.header').removeClass('active');
+				$('.header').addClass('active-close');
+				function headerRemoveClass(){
+					$('.header').removeClass('active-close');
+				}
+				setTimeout(headerRemoveClass, 200);
 			});
 		});
 	</script>
